@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><!--
+<?xml version="1.0" encoding="utf-8"?>
+<!--
   Copyright 2021 The Android Open Source Project
 
   Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,20 +14,22 @@
   See the License for the specific language governing permissions and
   limitations under the License.
   -->
-<resources xmlns:window="http://schemas.android.com/apk/res-auto">
+<resources
+    xmlns:window="http://schemas.android.com/apk/res-auto">
     <SplitPairRule
+        window:splitRatio="0.3"
+        window:splitMinWidth="600dp"
         window:finishPrimaryWithSecondary="true"
-        window:finishSecondaryWithPrimary="true"
-        window:splitMinWidth="200dp"
-        window:splitRatio="0.2">
+        window:finishSecondaryWithPrimary="true">
         <SplitPairFilter
             window:primaryActivityName="androidx.window.sample.embedding.SplitActivityList"
-            window:secondaryActivityName="androidx.window.sample.embedding.SplitActivityDetail" />
+            window:secondaryActivityName="androidx.window.sample.embedding.SplitActivityDetail"/>
     </SplitPairRule>
     <SplitPlaceholderRule
         window:placeholderActivityName="androidx.window.sample.embedding.SplitActivityListPlaceholder"
-        window:splitMinWidth="200dp"
-        window:splitRatio="0.2">
-        <ActivityFilter window:activityName="androidx.window.sample.embedding.SplitActivityList" />
+        window:splitRatio="0.3"
+        window:splitMinWidth="600dp">
+        <ActivityFilter
+            window:activityName="androidx.window.sample.embedding.SplitActivityList"/>
     </SplitPlaceholderRule>
 </resources>
